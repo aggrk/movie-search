@@ -41,7 +41,7 @@ export default function MovieDetails({
         setIsLoading(true);
         setError('');
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+          `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
         );
         if (!res.ok) throw new Error('Unable to fetch data');
         const data = await res.json();
